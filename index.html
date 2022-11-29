@@ -18,8 +18,8 @@
 
         <div id="add-container">
             <form action="" onsubmit="return false">
-                <input type="text" name="newTask" id="input-task" v-model="newTask" @keyup.enter="addTask"
-                    placeholder="write a task!" :class="{error: error}">
+                <input type="text" name="newTask" id="input-task" v-model="newTask" placeholder="write a task!"
+                    :class="{error: error}">
                 <input type="submit" value="Add task" id="input-add" @click="addTask">
             </form>
         </div>
