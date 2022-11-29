@@ -24,26 +24,30 @@
             </form>
         </div>
 
-        <ul id="tasks-container">
+        <ul id="tasks-container" class="tasks">
 
             <template v-for="task in this.tasks">
                 <li v-if="!task.done">
-                    <span>{{task.text}}</span>
                     <input type="checkbox" name="" id="" v-model="task.done">
+                    <span>{{task.text}}</span>
                 </li>
             </template>
 
         </ul>
 
-        <h2>
-            already done! &#128526;
-        </h2>
-        <ul id="done-tasks-container">
+        <div id="done-tasks-control">
+            <h2>
+                already done! &#128526;
+            </h2>
+            <button @click="clearDoneTasks">Clear</button>
+        </div>
+
+        <ul id="done-tasks-container" class="tasks">
 
             <template v-for="task in this.tasks">
                 <li v-if="task.done">
-                    <span>{{task.text}}</span>
                     <input type="checkbox" name="" id="" v-model="task.done">
+                    <span>{{task.text}}</span>
                 </li>
             </template>
 

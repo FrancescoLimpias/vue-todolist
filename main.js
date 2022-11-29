@@ -40,6 +40,10 @@ createApp({
             }
 
         },
+
+        clearDoneTasks(){
+            this.tasks = this.tasks.filter((task)=>!task.done)
+        }
     },
 
     // OnMount
