@@ -18,7 +18,7 @@
 
         <div id="add-container">
             <form action="" onsubmit="return false">
-                <input type="text" name="newTask" id="input-task" v-model="newTask" @keyDown.Enter="addTask"
+                <input type="text" name="newTask" id="input-task" v-model="newTask" @keyup.enter="addTask"
                     placeholder="write a task!" :class="{error: error}">
                 <input type="submit" value="Add task" id="input-add" @click="addTask">
             </form>
@@ -29,7 +29,7 @@
             <template v-for="task in this.tasks">
                 <li v-if="!task.done">
                     <input type="checkbox" name="" id="" v-model="task.done">
-                    <span>{{task.text}}</span>
+                    <input type="text" name="" id="" v-model="task.text">
                 </li>
             </template>
 
@@ -47,7 +47,7 @@
             <template v-for="task in this.tasks">
                 <li v-if="task.done">
                     <input type="checkbox" name="" id="" v-model="task.done">
-                    <span>{{task.text}}</span>
+                    <input type="text" name="" id="" v-model="task.text">
                 </li>
             </template>
 
