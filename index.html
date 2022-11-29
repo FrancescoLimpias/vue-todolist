@@ -45,7 +45,7 @@
         <ul id="done-tasks-container" class="tasks">
 
             <template v-for="task in this.tasks">
-                <li v-if="task.done">
+                <li v-if="task.done" class="done">
                     <input type="checkbox" name="" id="" v-model="task.done">
                     <input type="text" name="" id="" v-model="task.text">
                 </li>
